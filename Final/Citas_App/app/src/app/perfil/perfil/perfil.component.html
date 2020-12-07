@@ -1,0 +1,59 @@
+<div class="card animated fadeIn fast">
+    <img class="card-img-top img-fluid" [src]="p.foto" style="width: 200px; height: 200px;">
+    <div class="card-body">
+      <h4 class="card-title">{{ p.nombre }}</h4>
+      <section>
+          <label style='float:left'>Identificacion :   </label> <p class="card-text" style='margin-left:115px'> {{ p.id }} </p>
+          <label style='float:left'>Contextura:   </label> <p class="card-text" style='margin-left:115px'> {{ p.contextura }} </p>
+          <label style='float:left'>Educacion:   </label> <p class="card-text" style='margin-left:115px'> {{ p.educacion }} </p>
+          <label style='float:left'>Sexo:   </label><p class="card-text" style='margin-left:115px'> {{ p.sexo }} </p>
+          <label style='float:left'>Pais de origen:  </label><p class="card-text" style='margin-left:115px'> {{ p.pais }} </p>
+          <label style='float:left'>Sexo interesa:    </label><p class="card-text" style='margin-left:125px'>  {{ p.sexInt }} </p>
+          <label style='float:left'>Contextura interesa:    </label><p class="card-text" style='margin-left:150px'>  {{ p.contexInt }} </p>
+          <label style='float:left'>Fecha nacimiento:    </label><p class="card-text" style='margin-left:150px'> {{ p.nacimiento }} </p>
+    </section>
+    </div>
+    <h4>Aficiones que {{p.nombre}} posee</h4>
+    <div class='row'>
+      <div class='col'>
+          <table class="table table-striped">
+              <thead>
+                  <tr>
+                      <th>Nombre</th>
+                      <th>Imagen</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let aficion of p.Aficiones">
+                      <td>{{ aficion.nombre }}</td>
+                      <td> <img class='card-img-top img-fluid' [src]="aficion.foto"
+                              style="width: 200px; height: 200px;">
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+  <h4>Lugares que {{p.nombre}} ha recorrido</h4>
+  <div class='row'>
+    <div class='col'>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Imagen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let lugar of p.lugares">
+                    <td>{{ lugar.nombre }}</td>
+                    <td> <img class='card-img-top img-fluid' [src]="lugar.foto"
+                            style="width: 200px; height: 200px;">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<a class="nav-link" [routerLink]="['login']">Atras</a>
+  </div>

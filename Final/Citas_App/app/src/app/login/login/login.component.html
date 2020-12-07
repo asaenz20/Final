@@ -1,0 +1,15 @@
+<form>
+    <label for='simbolo'>Correo</label>
+    <input [(ngModel)]='correo' type='text' name='correo' class='form-control' id='correo'
+        aria-describedby='ayudaSimbolo' placeholder="Ingrese el correo">
+    <small id='ayudaSimbolo' class='form-text text-muted'>Ingrese el correo</small>
+    <label for='simbolo'>password</label>
+    <input [(ngModel)]='password' type='text' name='password' class='form-control' id='password'
+        aria-describedby='ayudaSimbolo' placeholder="Ingrese la contraseña">
+    <small id='ayudaSimbolo' class='form-text text-muted'>Ingrese la contraseña</small>
+    <button (click)="Inicio()" class='btn btn-outline-primary my-2 my-sm-0' 
+    type='button'>Ingresar</button>
+</form>
+<p *ngIf='a'>
+    <button (click)='Reset()' class='btn btn-outline-primary my-2 my-sm-0'>{{confirmacion}}</button></p>
+

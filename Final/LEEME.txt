@@ -1,0 +1,6 @@
+Primero se debe verificar que las ubicaciones de la carpeta FOTOS sea
+la misma que aparecen en el DML imagenes antes de ejecutarla. 
+
+Se tienen todos los metodos solicitados explicitamente en el documento.
+
+Muchas gracias!!!
